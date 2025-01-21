@@ -1,0 +1,20 @@
+read> a;
+read> x;
+read> e
+m = 1;
+
+while [m] {
+    x = 0.5 * (x + a / x);
+    if [(x - (a/x))]{
+            ifnot [(x - (a / x)) - 2*e] {
+                m = 0;
+            }
+            }
+    ifnot [(x - (a/x))]{
+            ifnot [((a/x) - x) - 2*e]{
+                m = 0;
+            }
+          }
+}
+
+write> x;

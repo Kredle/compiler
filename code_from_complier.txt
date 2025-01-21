@@ -1,0 +1,34 @@
+READ a  
+READ x  
+READ e  
+COPY 1  m
+COPY m  t0
+GOTOIFNOT t0 33 
+DIV a x t1
+ADD x t1 t2
+MUL 0.5 t2 t3
+COPY t3  x
+DIV a x t4
+SUB x t4 t5
+COPY t5  t6
+GOTOIFNOT t6 21 
+DIV a x t7
+SUB x t7 t8
+MUL 2 e t9
+SUB t8 t9 t10
+COPY t10  t11
+GOTOIF t11 21 
+COPY 0  m
+DIV a x t12
+SUB x t12 t13
+COPY t13  t14
+GOTOIF t14 32 
+DIV a x t15
+SUB t15 x t16
+MUL 2 e t17
+SUB t16 t17 t18
+COPY t18  t19
+GOTOIF t19 32 
+COPY 0  m
+GOTO   4
+WRITE x  
